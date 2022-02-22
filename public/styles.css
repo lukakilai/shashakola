@@ -1,10 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/bpg-algeti/css/bpg-algeti.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-banner-extrasquare-caps/css/bpg-banner-extrasquare-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-elite-caps/css/bpg-nino-elite-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/alkdots/css/alkdots.min.css");
 
 /* ! GENERAL */
 
 :root {
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
+
+  /* ** FONTS */
+  --header-font: "ALKDots", sans-serif;
+  --label-font: "BPG Nino Elite Caps", sans-serif;
+  --subheader-font: "BPG Algeti", sans-serif;
+  --output-font: "BPG Algeti", sans-serif;
+  --section-header-font: "BPG Banner ExtraSquare Caps", sans-serif;
+  --btn-font: "BPG Banner ExtraSquare Caps", sans-serif;
+
+  /* ** COLORS */
+  --main-color: #24a19c;
+  --form-bg-color: #eef2ff;
+  --output-wrapper-color: #f9f3df;
+  --output-color: #f9c5d5;
+
+  --btn-bg-color: #fff9f9;
+  --btn-clear: #ff6363;
+  --btn-hash: #219f94;
+  --btn-copy: #1c6dd0;
 }
 
 * {
@@ -20,7 +41,7 @@ body {
 #root {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 @media (max-width: 600px) {
@@ -30,7 +51,7 @@ body {
 }
 
 .dummy {
-  background-color: brown;
+  background-color: var(--main-color);
 }
 
 .main-container > * {
@@ -39,12 +60,26 @@ body {
 
 /* ! HEADER */
 
+header h1 {
+  font-family: var(--header-font);
+  margin-bottom: 0.5em;
+}
+
+header h3 {
+  font-style: italic;
+  font-family: var(--subheader-font);
+}
+
 .header-wrapper {
   padding: 10px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+header hr {
+  border: 2px solid var(--main-color);
 }
 
 /* ! FORM */
@@ -56,7 +91,7 @@ body {
 }
 
 .form-section {
-  background-color: rgb(241, 241, 241);
+  background-color: var(--form-bg-color);
   border-radius: 0.3rem;
   padding: 15px;
   display: flex;
@@ -66,7 +101,8 @@ body {
 
 .form-section-header {
   width: 30%;
-  border-right: 3px solid black;
+  border-right: 3px solid #213364;
+  font-family: var(--section-header-font);
 }
 
 .form-section-header h4 {
@@ -92,6 +128,7 @@ body {
 }
 
 .form-section label {
+  font-family: var(--label-font);
   font-size: 0.75rem;
   text-transform: capitalize;
 }
@@ -101,31 +138,68 @@ body {
   max-width: 100%;
 }
 
-.btns-wrapper {
-  margin: 0 auto;
-  display: flex;
-  gap: 20px;
-}
-
-.btn {
-  font-size: 0.8rem;
-  padding: 0.3em 0.6em;
-}
-
 .radio-wrapper {
   width: 100%;
+  font-weight: 700;
 }
 
 .radio-wrapper form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .radio-item {
-  width: 30%;
+  width: 33%;
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 770px) {
+  .radio-wrapper form {
+    flex-direction: column;
+  }
+
+  .radio-item {
+    width: 55%;
+    margin: 0.5rem 0;
+  }
+}
+
+.btns-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: var(--btn-font);
+  font-size: 0.8rem;
+  padding: 0.3em 0.6em;
+  background-color: var(--btn-bg-color);
+}
+
+.btn-clear {
+  border: 2px solid var(--btn-clear);
+  color: var(--btn-clear);
+}
+
+.btn-clear:hover {
+  background-color: var(--btn-clear);
+  color: white;
+}
+
+.btn-hash {
+  border: 2px solid var(--btn-hash);
+  color: var(--btn-hash);
+}
+
+.btn-hash:hover {
+  background-color: var(--btn-hash);
+  color: white;
 }
 
 /* ! OUTPUT */
@@ -137,11 +211,12 @@ body {
   align-items: flex-start;
   gap: 20px;
   padding: 10px;
-  background-color: rgb(249, 255, 227);
+  background-color: var(--output-wrapper-color);
 }
 
 .output-container > p {
   padding: 5px;
+  font-family: var(--label-font);
 }
 
 .output-wrapper {
@@ -155,5 +230,32 @@ body {
 .output {
   width: 100%;
   padding: 5px 10px;
-  background-color: rgb(205, 239, 255);
+  background-color: var(--output-color);
+  font-family: var(--output-font);
+}
+
+@media (max-width: 770px) {
+  .output-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .output-container p {
+    text-align: center;
+  }
+
+  .output-wrapper {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.btn-copy {
+  border: 2px solid var(--btn-copy);
+  color: var(--btn-copy);
+}
+
+.btn-copy:hover {
+  background-color: var(--btn-copy);
+  color: white;
 }

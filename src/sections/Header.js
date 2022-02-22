@@ -7,6 +7,7 @@ function Header() {
         <h1 class="header">SHA-შაკოლა</h1>
         <h3 class="subheader">პირველი და 100% ქართული Hash ფუნქცია</h3>
       </div>
+      <hr />
     </header>
   );
 }

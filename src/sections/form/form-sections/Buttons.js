@@ -5,7 +5,7 @@ function Buttons() {
     <div class="form-section">
       <div class="btns-wrapper">
         <button class="btn btn-clear">წაშლა</button>
-        <button class="btn btn-generate">დაჰეშეი</button>
+        <button class="btn btn-hash">დაჰეშეი</button>
       </div>
     </div>
   );
