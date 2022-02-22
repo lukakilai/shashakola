@@ -180,6 +180,7 @@ header hr {
   font-size: 0.8rem;
   padding: 0.3em 0.6em;
   background-color: var(--btn-bg-color);
+  border-radius: 0.35rem;
 }
 
 .btn-clear {
@@ -209,9 +210,9 @@ header hr {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
   padding: 10px;
   background-color: var(--output-wrapper-color);
+  border-radius: 0.3rem;
 }
 
 .output-container > p {

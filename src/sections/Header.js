@@ -3,9 +3,11 @@ import React from "react";
 function Header() {
   return (
     <header>
-      <div class="header-wrapper">
-        <h1 class="header">SHA-შაკოლა</h1>
-        <h3 class="subheader">პირველი და 100% ქართული Hash ფუნქცია</h3>
+      <div className="header-wrapper">
+        <h1 className="header">SHA-შაკოლა</h1>
+        <h3 className="subheader">
+          პირველი და 100% ქართული Hash ფუნქცია + ციფრული ხელმოწერა
+        </h3>
       </div>
       <hr />
     </header>

@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { EverythingContext } from "../../../context/context";
 
 function Sender() {
+  const { yourName, yourSurname, setYourName, setYourSurname } =
+    useContext(EverythingContext);
+
   return (
-    <div class="form-section">
-      <div class="form-section-header">
+    <div className="form-section">
+      <div className="form-section-header">
         <h4>შენ</h4>
       </div>
-      <div class="form-items">
-        <div class="form-item">
+      <div className="form-items">
+        <div className="form-item">
           <label>შენი სახელი</label>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setYourName(e.target.value)}
+            value={yourName}
+          />
         </div>
-        <div class="form-item">
+        <div className="form-item">
           <label>შენი გვარი</label>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setYourSurname(e.target.value)}
+            value={yourSurname}
+          />
         </div>
       </div>
     </div>

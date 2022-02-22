@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { EverythingContext } from "../../../context/context";
 
 function Message() {
+  const { msg, setMsg } = useContext(EverythingContext);
+
   return (
-    <div class="form-section">
-      <div class="form-section-header">
+    <div className="form-section">
+      <div className="form-section-header">
         <h4>მესიჯი</h4>
       </div>
-      <div class="form-items">
-        <textarea name="" id=""></textarea>
+      <div className="form-items">
+        <textarea
+          onChange={(e) => setMsg(e.target.value)}
+          value={msg}
+        ></textarea>
       </div>
     </div>
   );
