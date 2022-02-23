@@ -18,6 +18,7 @@ function Receiver() {
             type="text"
             onChange={(e) => setTheirName(e.target.value)}
             value={theirName}
+            placeholder="ბონ"
           />
         </div>
         <div className="form-item">
@@ -26,6 +27,7 @@ function Receiver() {
             type="text"
             onChange={(e) => setTheirSurname(e.target.value)}
             value={theirSurname}
+            placeholder="დო"
           />
         </div>
       </div>

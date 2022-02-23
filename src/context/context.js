@@ -10,6 +10,7 @@ function EverythingContextProvider({ children }) {
   const [msg, setMsg] = useState("");
   const [degree, setDegree] = useState("");
   const [hashedMsg, setHashedMsg] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const context = {
     yourName,
@@ -26,6 +27,8 @@ function EverythingContextProvider({ children }) {
     setDegree,
     hashedMsg,
     setHashedMsg,
+    copied,
+    setCopied,
   };
 
   return (

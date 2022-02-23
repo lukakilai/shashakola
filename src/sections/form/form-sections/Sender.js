@@ -18,6 +18,7 @@ function Sender() {
             type="text"
             onChange={(e) => setYourName(e.target.value)}
             value={yourName}
+            placeholder="ჯონ"
           />
         </div>
         <div className="form-item">
@@ -26,6 +27,7 @@ function Sender() {
             type="text"
             onChange={(e) => setYourSurname(e.target.value)}
             value={yourSurname}
+            placeholder="დო"
           />
         </div>
       </div>

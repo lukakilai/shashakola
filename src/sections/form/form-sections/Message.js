@@ -14,6 +14,7 @@ function Message() {
         <textarea
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
+          placeholder="როგორახარ, ბონდო?"
         ></textarea>
       </div>
     </div>

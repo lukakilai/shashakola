@@ -122,7 +122,8 @@ header hr {
   gap: 5px;
 }
 
-.form-section input {
+.form-section input,
+.form-section textarea {
   font-size: 0.7rem;
   padding: 0.3em 0.5em;
 }
@@ -156,7 +157,7 @@ header hr {
   justify-content: space-evenly;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 850px) {
   .radio-wrapper form {
     flex-direction: column;
   }
@@ -165,6 +166,24 @@ header hr {
     width: 55%;
     margin: 0.5rem 0;
   }
+}
+
+.btn-section {
+  background-color: var(--form-bg-color);
+  border-radius: 0.3rem;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn-section .errorMsg {
+  font-family: var(--section-header-font);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: red;
+  border-bottom: 2px solid red;
 }
 
 .btns-wrapper {
@@ -203,6 +222,10 @@ header hr {
   color: white;
 }
 
+.btn-hash:disabled {
+  opacity: 0.4;
+}
+
 /* ! OUTPUT */
 
 .output-container {
@@ -229,7 +252,8 @@ header hr {
 }
 
 .output {
-  width: 100%;
+  word-break: break-all;
+  max-width: 100%;
   padding: 5px 10px;
   background-color: var(--output-color);
   font-family: var(--output-font);
