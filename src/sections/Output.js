@@ -7,23 +7,21 @@ function Output() {
 
   return (
     <section>
-      {hashedMsg.length > 0 && (
-        <div className="output-container">
-          <p>ინებე შენი დაშიფრული შეტყობინება</p>
-          <div className="output-wrapper">
-            <p className="output">{hashedMsg}</p>
-            <button
-              className="btn btn-copy"
-              onClick={() => {
-                setCopied(true);
-                navigator.clipboard.writeText(hashedMsg);
-              }}
-            >
-              {copied ? "დაკოპირებულია ✅" : "დაკოპირება"}
-            </button>
-          </div>
+      <div className="output-container">
+        <p>ინებე შენი დაშიფრული შეტყობინება</p>
+        <div className="output-wrapper">
+          <p className="output">{hashedMsg}</p>
+          <button
+            className="btn btn-copy"
+            onClick={() => {
+              setCopied(true);
+              navigator.clipboard.writeText(hashedMsg);
+            }}
+          >
+            {copied ? "დაკოპირებულია ✅" : "დაკოპირება"}
+          </button>
         </div>
-      )}
+      </div>
     </section>
   );
 }

@@ -47,12 +47,16 @@ function Buttons() {
         curse.var = "ვარვინმეშიარშეგეშალო";
         break;
       case "2":
-        curse.vinc = "იმისდედასშევეცი";
+        curse.vinc = "იმისდედასშევეციიიი";
         curse.var = "ვაროეეეეეეეეე";
         break;
     }
 
-    const hash = `20ჭყბ60${theirName}${theirSurname}სგარდავინცესწაიკითხოს${curse.vinc}90ღვპჭ01>>>${newMsg}<<<46პტღ034ვინვარდა${yourName}${yourSurname}${curse.var}`;
+    const hash = `2857${theirName}${theirSurname}სგარდავინცესწაიკითხოს${
+      curse.vinc
+    }0275>>>${newMsg}<<<1437${
+      degree === "2" ? "ვისაცპრობლემააქ" : ""
+    }ვინვარდა${yourName}${yourSurname}${curse.var}5729`;
 
     setHashedMsg(hash);
   }
